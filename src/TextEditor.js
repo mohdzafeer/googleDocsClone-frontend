@@ -4,6 +4,8 @@ import Quill from "quill";
 import {io} from "socket.io-client";
 import { useParams } from "react-router-dom";
 
+
+
 const SAVE_INTERVAL_MS=2000;
 const TOOLBAR_OPTION=[
     [{header:[1,2,3,4,5,6,false]}],
@@ -25,7 +27,7 @@ const TextEditor=()=>{
     console.log(documentId)
 
     useEffect(()=>{
-        const s=io('https://googledocsclone-backend-p188.onrender.com')
+        const s=io('https://googledocsclone-backend-g0ni.onrender.com')
         setSocket(s)
         return()=>{
             s.disconnect();
